@@ -4,12 +4,7 @@ var cors = require("cors");
 
 const app = express();
 
-app.use(
-  cors({
-    allowedHeaders: { "Access-Control-Allow-Headers": "*" },
-    origin: "*",
-  })
-);
+app.use(cors());
 app.listen(3001, () => console.log("Server listening at port 3001"));
 
 const fileUrl =
