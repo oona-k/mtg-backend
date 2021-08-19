@@ -1,14 +1,16 @@
 const express = require("express");
 
 var cors = require("cors");
+var corsoptions = {
+  origin: "https://magic-the-gathering-assignment.netlify.app/",
+};
 const app = express();
 
-app.use(cors());
+app.use(cors(corsoptions));
 app.listen(3001, () => console.log("Server listening at port 3001"));
 
 const fileUrl =
   "https://media.wizards.com/2021/downloads/MagicCompRules%2020210419.txt";
-
 
 app.get("/getrules", (req, res) => {
   const https = require("https");
