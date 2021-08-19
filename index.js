@@ -5,7 +5,9 @@ var cors = require("cors");
 const app = express();
 
 app.use(cors());
-app.listen(3001, () => console.log("Server listening at port 3001"));
+app.listen(process.env.PORT || 3001, () =>
+  console.log("Server listening at port 3001")
+);
 
 const fileUrl =
   "https://media.wizards.com/2021/downloads/MagicCompRules%2020210419.txt";
