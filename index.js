@@ -1,12 +1,10 @@
 const express = require("express");
 
 var cors = require("cors");
-var corsoptions = {
-  origin: "*",
-};
+
 const app = express();
 
-app.use(cors(corsoptions));
+app.use(cors());
 app.listen(3001, () => console.log("Server listening at port 3001"));
 
 const fileUrl =
