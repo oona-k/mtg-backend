@@ -2,7 +2,7 @@ const express = require("express");
 
 var cors = require("cors");
 var corsoptions = {
-  origin: "https://magic-the-gathering-assignment.netlify.app/",
+  origin: "*",
 };
 const app = express();
 
